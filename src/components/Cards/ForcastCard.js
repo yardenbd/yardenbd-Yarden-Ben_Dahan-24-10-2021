@@ -2,11 +2,10 @@ import React from 'react'
 import iconSVG from '../../pages/images/icon-5.svg'
 import { useSelector } from "react-redux";
 export default function ForcastCard(props) {
-    // const unit = useSelector(state=>state.metric)
-    // const imperial = cityInfo.currentTemperature.Imperial
-    // const metric = cityInfo.currentTemperature.Metric
+  
     const minTemp = props.temp.Minimum.Value
     const maxTemp = props.temp.Maximum.Value
+    console.log(props)
     let date = props.date.split('T')[0]
     const themeSlice =  useSelector(state => state.theme)
     return (

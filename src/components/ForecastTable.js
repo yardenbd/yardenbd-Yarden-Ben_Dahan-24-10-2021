@@ -2,7 +2,6 @@ import React from "react";
 import ForcastCard from "./Cards/ForcastCard";
 import { useSelector } from "react-redux";
 import TodayForecastCard from "./Cards/TodayForecastCard";
-import useHttp from "../hooks/use-http";
 export default function ForecastTable(props) {
   const isLoading = props.isLoading
   const isDefault = props.renderDefault;
@@ -11,6 +10,7 @@ export default function ForecastTable(props) {
   const nextDaysForecast = useSelector(
     (state) => state.forecast.nextDaysForecast
   );
+  console.log(nextDaysForecast)
   const searchedCity = useSelector((state) => state.cityForecast.forecast);
   const searchedCityForecast = useSelector(
     (state) => state.cityForecast.nextDaysForecast

@@ -40,7 +40,9 @@ export default function Input(props) {
   }, []);
   /////////////////////////////////
   const nextDaysForecast = useCallback((response) => {
+
     const forecastArray = response.DailyForecasts;
+    console.log(forecastArray)
     dispatch(forecastActions.getNextDaysForecast({ forecast: forecastArray }));
   }, []);
   ///////////////////////////
@@ -62,7 +64,7 @@ export default function Input(props) {
     );
     sendRequest(
       {
-        url: `${getNextDaysForecast}${cityKey}?apikey=${apiKey}&metric=true}`,
+        url: `${getNextDaysForecast}${cityKey}?apikey=${apiKey}&metric=true`,
       },
       nextDaysForecast
     );

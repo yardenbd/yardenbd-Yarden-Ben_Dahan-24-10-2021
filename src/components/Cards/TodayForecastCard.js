@@ -35,9 +35,9 @@ export default function TodayForecastCard(props) {
         <div className="degree">
           <div className="num" style={styles}>
              
-            {unit ? info.currentTemperature.Metric.Value : info.currentTemperature.Imperial.Value}
+            {!unit ? info.currentTemperature.Metric.Value : info.currentTemperature.Imperial.Value}
             <sup>o</sup>
-            {unit ? info.currentTemperature.Metric.Unit : info.currentTemperature.Imperial.Unit}
+            {!unit ? info.currentTemperature.Metric.Unit : info.currentTemperature.Imperial.Unit}
           </div>
           <div className="forecast-icon">
             <img src="images/icons/icon-1.svg" alt="" width={90} />

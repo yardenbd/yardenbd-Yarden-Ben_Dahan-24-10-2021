@@ -38,7 +38,7 @@ const themeSlice =  useSelector(state => state.theme)
                 <Link to="/favorites">Favorites</Link>
               </li>
               <li className="menu-item current-menu-item">
-                <a onClick={themeToggler}>Toggle Theme </a>
+                <a  onClick={themeToggler}>Toggle Theme </a>
               </li>
             </ul>
           </div>

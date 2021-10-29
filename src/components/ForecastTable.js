@@ -35,10 +35,10 @@ export default function ForecastTable(props) {
   );
   return (
     <>
-    {isLoading && <h1>Loading...</h1>}
       <div className="container" style={{marginTop:'-150px'}} >
         <div className="forecast-container" style={{backgroundColor:themeSlice==='dark'?null:'rgb(213, 242, 255)'}}>
-          
+        {isLoading && <h1>Loading...</h1>}
+
           {isDefault && renderData}
           {!isDefault && renderData}
         </div>

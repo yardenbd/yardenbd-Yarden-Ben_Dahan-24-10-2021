@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "../Button";
 import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
 import { getLoaclStorage } from "../../services/localStorage";
 import { saveToLocalStorage } from "../../services/localStorage";
 export default function TodayForecastCard(props) {
